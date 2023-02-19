@@ -1,0 +1,151 @@
+archetype (adl_version=1.4; uid=453454c8-0c0f-4d78-890e-63769cf17e7c)
+	openEHR-EHR-ADMIN_ENTRY.investigation_conclusion.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-06-25">
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Atomica Informatics">
+		["email"] = <"heather.leslie@atomicainformatics.com">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"25B98CDF8B282DB4C8726D6F77C9B492">
+		["build_uid"] = <"d8ef0f4d-47c4-47d8-8bd2-3cb6c8e97715">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Infectious disease conclusion
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Index disease
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Final classification
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Unconfirmed
+									at0004,    -- Confirmed
+									at0005,    -- Excluded
+									at0006]    -- Cannot classify/Indeterminate
+								}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Basis for confirmation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Basis for exclusion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Classification date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Infection source
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Certainty of source
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Infectious disease conclusion">
+					description = <"Conclusions about the presence of an infectious disease in an individual following a case investigation.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Final classification">
+					description = <"Classification of the infectious disease as cause of the condition, after investigation.">
+				>
+				["at0003"] = <
+					text = <"Unconfirmed">
+					description = <"The presence of infection by the index disease has not yet been confirmed or excluded, for example awaiting results. Also known as suspected, possible or probable.">
+				>
+				["at0004"] = <
+					text = <"Confirmed">
+					description = <"The presence of infection by the index disease has been confirmed.">
+				>
+				["at0005"] = <
+					text = <"Excluded">
+					description = <"The presence of infection by the index disease has been excluded.">
+				>
+				["at0006"] = <
+					text = <"Cannot classify/Indeterminate">
+					description = <"It is not possible to determine if infection by the index disease is confirmed or excluded.">
+				>
+				["at0007"] = <
+					text = <"Index disease">
+					description = <"The name of the infectious disease under investigation.">
+					comment = <"This data element may be redundant if the index disease has been identified elsewhere within a template.">
+				>
+				["at0008"] = <
+					text = <"Basis for confirmation">
+					description = <"The basis on which a final classification of 'Confirmed' was made.">
+					comment = <"For example: clinical diagnosis; laboratory test result; or epidemiological link.">
+				>
+				["at0009"] = <
+					text = <"Basis for exclusion">
+					description = <"The basis on which a final classification of 'Excluded' was made.">
+					comment = <"For example: laboratory test result; or alternative diagnosis made.">
+				>
+				["at0010"] = <
+					text = <"Classification date">
+					description = <"The date on which the final classification was made.">
+				>
+				["at0011"] = <
+					text = <"Infection source">
+					description = <"The most likely source or aetiology of infection.">
+					comment = <"For example: travel-related; direct contact with a family member; or vertical transmission.">
+				>
+				["at0012"] = <
+					text = <"Certainty of source">
+					description = <"The likelihood of the identified source being the cause of infection.">
+					comment = <"For example: suspected; probably; confirmed.">
+				>
+			>
+		>
+	>
