@@ -1,0 +1,233 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "5050e1c4-729f-4cb1-8ad1-329cc8c19a1b",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2022-04-14"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "19ad0f21e0daed928c1feebcd3095ef0",
+      "sem_ver" : "0.2.2",
+      "build_uid" : ""
+    },
+    "details" : {
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-EVALUATION.sexual_health_summary.v0",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-EVALUATION.sexualhealth.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "EVALUATION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0012.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "Gonorrhea", "HIV/AIDS", "HPV", "Chlamydia", "Herpes Simplex", "Hepatitis B", "Syphilis" ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_CODED_TEXT",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "defining_code",
+                  "children" : [ {
+                    "@type" : "C_TERMINOLOGY_CODE",
+                    "rmTypeName" : "TERMINOLOGY_CODE",
+                    "occurrences" : "1..1",
+                    "terminologyId" : {
+                      "value" : "local"
+                    },
+                    "constraint" : [ "ac0.2" ],
+                    "selectedTerminologies" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0003.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DURATION",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_DURATION",
+                    "rmTypeName" : "DURATION",
+                    "occurrences" : "1..1",
+                    "patternedConstraint" : "PY",
+                    "constraint" : [ {
+                      "lower" : "P0Y",
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "nodeId" : "at0013",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0004.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DHP PL: Sexual Health",
+          "description" : "Summary or persistent information about an individual's sexual health and history."
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Are you sexually active?",
+          "description" : "Is the individual sexually active?"
+        },
+        "ac0.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.2",
+          "description" : ""
+        },
+        "at0012.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012.1",
+          "text" : "Have you ever had any of the following diseases?",
+          "description" : "Narrative description about the sexual health history of an individual."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : {
+      "ac0.1" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.1",
+        "members" : [ "at0009", "at0010", "at0011" ]
+      },
+      "ac0.2" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.2",
+        "members" : [ "at0009", "at0010", "at0011" ]
+      }
+    }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "56365927-1c3e-37e0-a024-77cb07311a26",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "DHP PL: Sexual Health Screening",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ ]
+}
