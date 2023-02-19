@@ -1,0 +1,2229 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "392c91b6-6332-4d33-9dcb-8c3a3b48ec59",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2022-04-20"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "3.1.0",
+      "build_uid" : "",
+      "MD5-CAM-1.0.1" : "340bbaf9cf1f519f579c46ef1254d9b8"
+    },
+    "details" : {
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.social_summary.v0",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_social_summary.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0001.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-social_summary-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0001.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-occupation_summary-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0001.3",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-living_arrangement-001.v0",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DHP PL: Social Summary",
+          "description" : "A persistent and evolving summary record of information about social circumstances and experiences that may impact an individual's health."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "0f32767b-0d90-375d-bcf0-96cc23fafb97",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "DHP PL: Social Summary",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "1af29329-09a8-4376-bfb1-73d3ee70be71",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et fritekstsammendrag om sosiale omstendigheter, opplevelser eller erfaringer som kan ha en innvirkning på et individs helse. Arketypen gir et rammeverk der en kan nøste detaljerte CLUSTER-arketyper som beskriver ulike aspekter av sosiale omstendigheter, opplevelser eller erfaringer i detalj.",
+          "keywords" : [ "sosial", "familie", "partner", "utdanning", "utdannelse", "arbeid", "jobb", "ansettelse", "miljø", "omgivelser", "bolig", "boforhold", "økonomi", "fritid", "hobby", "aktivitet", "religion", "etnisitet", "språk", "nasjonalitet", "livssyn", "mestringsevne", "erfaringer", "natur", "karakter", "adferdsmønster" ],
+          "use" : "Brukes for å registrere et fritekstsammendrag om sosiale omstendigheter eller opplevelser som kan ha en innvirkning på et individs helse. \r\n\r\nBrukes for å inkludere fritekstbeskrivelser av sosiale omstendigheter eller erfaringer som allerede er registrert i eksisterende kliniske systemer til et arketypeformat.\r\n\r\nBruk som en kontainer arketype for å gi en felles gjenfinnbar ENTRY-arketype som kan inneholde detaljerte CLUSTER-arketyper. Eksempler på passende CLUSTER-arketyper kan være nære relasjoner, sosial støtte, boligforhold, arbeid, utdannelse og livssyn.\r\n\r\nBruken av uttrykket \"Sosialanamnese\" har stor variasjon. Arketypen er utviklet for å tillate representasjon av ulike konsepter som utrykker sosialanamnese i ulike kliniske sammenhenger ved hjelp av en blanding av gjenbrukbare CLUSTER-arketyper.",
+          "misuse" : "Brukes ikke for å registrere informasjon relatert til livsstil. For eksempel: Bruk spesifikke arketyper for bruk av alkohol, tobakk og andre substanser, kosthold og ernæring, og fysisk aktivitet.",
+          "copyright" : "© National E-Health Transition Authority, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a narrative summary about social circumstances or experiences that may have a potential impact on an individual's health, and to provide a framework in which to nest detailed CLUSTER archetypes, each of which will describe the various aspects of social circumstances or experiences in detail.",
+          "keywords" : [ "social", "family", "education", "occupation", "environment", "housing", "finances", "social history" ],
+          "use" : "Use to record a narrative summary about social circumstances or experiences that may have a potential impact on an individual's health.\r\n\r\nUse to incorporate the narrative descriptions of social circumstances or experiences already captured within existing clinical systems into an archetyped format.\r\n\r\nUse as a container archetype - to provide a common, queryable ENTRY archetype in which specific, detailed CLUSTER archetypes can be nested. Examples of appropriate CLUSTER archetypes may include, and are not limited to, relationships with others, social supports, living arrangements, employment, education and religion.\r\n\r\nThe use of the term 'social summary' varies enormously in practice. This archetype has been designed to allow the concepts that express social history in varying clincial contexts to be represented with the appropriate mix of re-useable archetypes.",
+          "misuse" : "Not to be used to record Lifestyle-related information - for example, use specific archetypes for alcohol, tobacco and other substance use; diet and nutrition; and physical activity.",
+          "copyright" : "© National E-Health Transition Authority, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare una sintesi narrativa sulle circostanze o esperienze sociali che possono avere un potenziale impatto sulla salute di un individuo, e fornire un quadro in cui annidare gli archetipi dettagliati di CLUSTER, ognuno dei quali descriverà in dettaglio i vari aspetti delle circostanze o delle esperienze sociali.",
+          "keywords" : [ "sociale", "famiglia", "educazione", "occupazione", "ambiente", "Alloggiamento", "finanze", "storia sociale" ],
+          "use" : "Utilizzare per registrare un riassunto narrativo su circostanze o esperienze sociali che possono avere un potenziale impatto sulla salute di un individuo.\r\n\r\nUtilizzare per incorporare le descrizioni narrative di circostanze o esperienze sociali già catturate all'interno di sistemi clinici esistenti in un formato archetipizzato.\r\n\r\nUso come archetipo contenitore - per fornire un archetipo comune e interrogabile di ENTRY in cui possono essere annidati specifici e dettagliati archetipi di CLUSTER. Esempi di archetipi di CLUSTER appropriati possono includere, e non sono limitati a, relazioni con gli altri, supporti sociali, organizzazione della vita, occupazione, istruzione e religione.\r\n\r\nL'uso del termine \"riassunto sociale\" varia enormemente nella pratica. Questo archetipo è stato progettato per consentire di rappresentare i concetti che esprimono la storia sociale in diversi contesti clinici con il giusto mix di archetipi riutilizzabili.",
+          "misuse" : "Da non utilizzare per registrare informazioni relative allo stile di vita - per esempio, utilizzare archetipi specifici per l'uso di alcol, tabacco e altre sostanze; dieta e nutrizione; e attività fisica.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.social_summary.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-social_summary-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-education_record-001.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-housing_record-001.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "it" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "7ac3090e-48c9-4094-b03a-c128233263e2",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand og Silje Ljosland Bakke",
+        "organisation" : "Helse Bergen og Nasjonal IKT"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Paolo Anedda",
+        "organisation" : "Inpeco",
+        "email" : "paolo.anedda@inpeco.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "224e7819-64d9-4069-a381-b350b1f14bdf",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljert informasjon om utdanning eller opplæring individet har foretatt, som vil gi en oversikt over utdanningsbakgrunn.",
+          "keywords" : [ "utdanning, skole, universitet, videregående, ungdomsskole, barneskole, lærling, læretid, kurs, fagbrev, diplom, studie, bachelor, master, PhD, videreutdanning, realkompetanse, formalkompetanse, sertifikat, studiekompetanse" ],
+          "use" : "Brukes for å registrere detaljert informasjon om utdanning eller opplæring individet har foretatt, som vil gi en oversikt over utdanningsbakgrunn.\r\n\r\nEt individ kan ha gjennomføre flere samtidige eller overlappende utdanning eller opplæring. Hver utdanning eller opplæring registreres i egne instanser av denne arketypen. Flere instanser av denne arketypen registrert over tid vil danne en samlet oversikt over nåværende og tidligere utdanning og opplæring.\r\n\r\nNåværende utdanning eller opplæring utledes fra \"Startdato\" hvis det ikke er registrert noe i \"Sluttdato\".\r\n\r\nArketypen er laget for å benyttes i SLOTet \"Utdanning\" i arketypen EVALUATION.education_summary (Utdanningsammendrag) , men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.",
+          "misuse" : "Brukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser under skolegangen/utdanningen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om utdanning eller opplæring for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Dette kan utledes fra \"Startdato\" hvis det ikke er registrert noe i \"Sluttdato\", og må registreres i en egen OBSERVATION-arketype for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a single period of formal education or training undertaken by an individual, which will contribute to an overview of their educational background.",
+          "keywords" : [ "university, school, certificate, apprenticeship, diploma, degree, course, study, training," ],
+          "use" : "Use to record details about a single period of formal education or training undertaken by an individual, which will contribute to an overview of their educational background.\r\n\r\nAn individual may undertake multiple training courses simultaniously, or overlapping. Each education or training should be recorded in a separate instance of this archetype. Multiple instances of this archetype captured over time will build a cumulative history of past and present education and training.\r\n\r\nCurrent education or training may be implied from a 'Date commenced' but no 'Milestone achieved'.\r\n\r\nThis archetype has been specifically designed to be used in the 'Education record' SLOT within the EVALUATION.education_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.",
+          "misuse" : "Not to be used for detailed descriptions of health risks or exposure to hazardous substances during the education or training. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about the education or training of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung von Einzelheiten über einen einzelnen Zeitraum der schulischen Bildung oder Ausbildung einer Person, die einen Überblick über ihren Bildungshintergrund geben.",
+          "keywords" : [ "Universität, Schule, Zertifikat, Lehre, Diplom, Abschluss, Kurs, Studium, Ausbildung" ],
+          "use" : "Der Archetyp wird verwendet, um Einzelheiten über einen einzelnen Zeitraum der schulischen Bildung oder Ausbildung einer Person aufzuzeichnen, die einen Überblick über ihren Bildungshintergrund geben.\r\n\r\nEine Person kann mehrere Bildungsgänge gleichzeitig oder überlappend absolvieren. Jede Aus- oder Weiterbildung sollte in einer separaten Instanz dieses Archetyps erfasst werden. Mehrere Instanzen dieses Archetyps, die im Laufe der Zeit erfasst werden, bilden eine kumulative Geschichte der vergangenen und gegenwärtigen Bildung und Ausbildung.\r\n\r\nDie derzeitige Aus- oder Weiterbildung kann aus einem \"Datum des Beginns\", aber keinem \"erreichten Meilenstein\" abgeleitet werden.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung im SLOT \"Education record\" innerhalb des Archetyps EVALUATION.education_summary entwickelt, kann aber auch in jedem anderen ENTRY- oder CLUSTER-Archetyp verwendet werden, sofern dies klinisch sinnvoll ist.\r\n",
+          "misuse" : "Nicht zur Darstellung detaillierter Beschreibungen von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Stoffen während der Aus- oder Weiterbildung. Verwenden Sie zu diesem Zweck die Archetypen EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nNicht zur Aufzeichnung von Informationen über die Aus- oder Weiterbildung einer Person zu einem bestimmten Zeitpunkt (z. B. am 16. Juni 2014) oder während eines relativen Zeitraums (z. B. \"in den letzten 30 Tagen\") verwenden. Verwenden Sie zu diesem Zweck einen geeigneten Archetyp OBSERVATION.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.education_record.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-education_record-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "Education Levels"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ "Education Levels" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { }
+      },
+      "termBindings" : {
+        "Education Levels" : {
+          "ac0.1" : "terminology://fhir.hl7.org/ValueSet/$expand?url=http://aehrc.com/fhir/ValueSet/education-levels"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "cb4b1673-819e-4aeb-80ee-5a6138293009",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand",
+        "organisation" : "Helse Bergen HF, Norway",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Darin Leonhardt",
+        "organisation" : "PLRI",
+        "email" : "leonhardt.darin@mh-hannover.de"
+      },
+      "accreditation" : "-",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "d471b86a-e866-4426-af59-e53386ec1070",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om et individs bolig eller boform i en spesifisert tidsperiode.",
+          "keywords" : [ "bolig", "aldersbolig", "hjem", "hjemmesituasjon", "sykehjem", "omsorgsbolig", "midlertidig", "institusjon", "leilighet", "hospits", "uten fast bopel", "bopel", "UFB", "enebolig", "oppholdssted", "bokollektiv", "hybel", "hospice", "aldershjem", "bosted", "adresse", "hytte", "fritidsbolig", "tilrettelagt", "bofellesskap", "støtte", "botrening", "leieforhold", "småbruk", "gård" ],
+          "use" : "Brukes for å registrere detaljer om et individs bolig eller boform i en spesifisert tidsperiode.\r\n\r\nArketypen omfatter alle former for bolig og/eller boform. For eksempel: alle leide eller eide boliger over tid, veksling mellom to boliger i en spesifisert tidsperiode, gjennomreisende som nomader som flytter gjennom sesongen, omreisende eller hjemløse. \r\n\r\nEt individ kan ha flere aktive boliger samtidig. Hver bolig/boform eller adresse registreres i egne instanser av denne arketypen, for eksempel dersom et individ flytter fra ett hus til et annet eller til en leilighet, eller flytter den samme bobilen/campingvognen fra en adresse til en annen.\r\n\r\nFlere instanser av denne arketypen registrert over tid vil gi en oversikt over tidligere og nåværende bolig og/eller boform.\r\n\r\nEn aktiv eller nåværende bolig/boform kan bli utledet fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\".\r\n\r\nHvis detaljer om en bolig/boform endrer seg vesentlig, som ved endring av adresse eller besittelsesrett, registreres dette i egne instanser av denne arketypen.\r\n\r\nArketypen er laget for å benyttes i SLOTet \"Bolig\" i arketypen EVALUATION.housing_summary (Boligsammendrag), men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.\r\n\r\nDet kan være tilsynelatende eller reell overlapp mellom dataelementene i denne arketypen og opplysninger om bolig/adresse i demografisk informasjon i kliniske systemer. Dataelementene i denne arketypen er laget spesifikt for å støtte kliniske formål.",
+          "misuse" : "Brukes ikke for å registrere informasjon om en den fysiske bygningen der individet bor. Bruk arketypen CLUSTER.dwelling for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om individets boforhold. Bruk arketypen CLUSTER.household for dette formålet.\r\n\r\nBrukes ikke for å registrere hvem et individ bor med. Bruk arketypen EVALUATION.social_network for dette formålet.\r\n\r\nBrukes ikke for å registrere midlertidige endringer eller episoder innen en enkelt bolig eller boform, som å være på en kort ferie.\r\n\r\nBrukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser i boligen eller boformen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om bolig/boform for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Bruk en egnet OBSERVATION-arketype for dette formålet.",
+          "copyright" : "© 2010 NEHTA, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a single home or other residential setting of an individual during a specified period of time.",
+          "keywords" : [ "housing", "accommodation", "residential care", "home", "house", "apartment", "homeless", "rent", "owner", "shared", "temporary", "institution", "flat", "condo", "condominium", "hospice" ],
+          "use" : "Use to record details about a single home or other residential setting of an individual during a specified period of time.\r\n\r\nThe scope of this archetype is inclusive of all residential settings occupied by an individual. For example: all rented homes over time; alternating between two homes during a specified period of time; transience, such as nomadic herders moving between seasonal pastures; itinerant travellers; or homeless.\r\n\r\nAn individual may require more than one active housing record at a time. Each new residential setting or address should be recorded in a separate instance of this archetype. For example if an individual is moving from a house to another house or apartment, or moving the same mobile home from one address to another.\r\n\r\nMultiple instances of this archetype captured over time will result in the aggregation of a history of past and present housing situations.\r\n\r\nAn active, or current housing situation may be implied from a 'Date commenced' but no 'Date ceased'. \r\n\r\nIf the housing situation changes significantly, such as a change of address or type of tenure, then this should also be recorded as a separate instance of this archetype.\r\n\r\nThis archetype has been specifically designed to be used in the 'Housing record' SLOT within the EVALUATION.housing_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThere may be some apparent or real overlap between the data elements in this archetype and housing/address details that may be stored as demographic details in clinical or administrative systems. These data elements have been designed specifically to support clinical purposes.",
+          "misuse" : "Not to be used to record information about a physical building where an individual lives. Use CLUSTER.dwelling for this purpose.\r\n\r\nNot to be used to record information about the living arrangements for an individual. Use CLUSTER.household for this purpose.\r\n\r\nNot to be used to record who an individual lives with. Use EVALUATION.social_network for this purpose.\r\n\r\nNot to be used to record temporary changes or episodes within a single housing record, such as being on holiday.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the home or residential setting. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about the housing situation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.housing_record.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-housing_record-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0016.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0013.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0014.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0018.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dwelling-001.v0",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "2b4fab23-5af9-4fb3-a4e6-f2a6ddaea471",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, John Tore Valand and Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF, Helse Bergen HF, Oslo University Hospital HF",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no / john.tore.valand@helse-bergen.no / varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "0ec7acd6-078f-492b-bb2d-06d7c7fae566",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung eines Überblicks und einer Beschreibung zu Aspekten über die Wohnstätte, in der eine Person lebt.",
+          "keywords" : [ "Treppenhaus", "Schlafzimmer", "Badezimmer", "Zugang" ],
+          "use" : "Zu verwenden zur Erfassung von Details zur Wohnstätte, in der eine Person lebt - insbesondere dort, wo dies Auswirkungen auf deren Gesundheit oder Sicherheit oder die Erbringung von Gesundheitsleistungen haben kann. \r\n\r\nDieser Archetyp wurde entworfen, um Merkmale zum Wohnsitz einer Person zu erfassen, die verwendet werden können: \r\n- um zur Identifikation von Hilfsmitteln/Unterstützungen beizutragen, die Zuhause nützlich sein könnten; \r\n- zur Erfassung von Modifikationen oder Verbesserungen, um den universellen Zugang zu unterstützen; \r\n- zur Information von Ermittlungen über Ausbrüche im Gesundheitswesen. \r\n\r\nDieser Archetyp wurde zur Verwendung innerhalb des Archetypen EVALUATION.housing_summary oder CLUSTER.housing_record entworfen, kann aber auch innerhalb jedes anderen geeigneten ENTRY oder CLUSTER Archetyps verwendet werden. \r\n\r\nSofern spezifische Messwerte oder spezifische Details benötigt werden, können zusätzliche Archetypen innerhalb des SLOTs 'Ergänzende Details' verschachtelt werden. \r\n\r\nKonformität mit universellen Design Prinzipien sollten in einem separaten Archetypen erfasst werden, der innerhalb des SLOTs 'Ergänzende Details' verschachtelt werden kann.",
+          "misuse" : "Nicht zu verwenden um Details zu sozialen Umständen zu erfassen, in denen die Person lebt. Nutzen Sie CLUSTER.living_arrangement für diesen Zweck. \r\n\r\nNicht zu verwenden um die physische Adresse zu erfassen, an der eine Person lebt. Nutzen Sie für diesen Zweck demografische Archetypen, oder CLUSTER.address, sofern die Adresse der Person innerhalb der Gesundheitsakte erfasst werden muss. \r\n\r\nNicht zu verwenden um Informationen zur Wohnstätte zu erfassen, die nicht auf die Gesundheit oder den Bedarf an gesundheitlicher Versorgung einer Person einwirken. Beispielsweise sollte der Sicherheits-Zugangscode für den Besuch einer ambulanten Krankenpflegerin nicht unter Verwendung dieses Archetyps erfasst werden. \r\n\r\nNicht zu verwenden um die Einhaltung von universellen Design-Prinzipien zu erfassen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere en oversikt og beskrivelse om egenskapene til en bolig der et individ bor.",
+          "keywords" : [ "trapper", "soverom", "bad", "tilgjengelighet", "enebolig", "leilighet", "campingvogn", "hytte", "etasje", "rullestol", "areal", "universell utforming", "UU" ],
+          "use" : "Brukes for å registrere detaljer om egenskapene til en bolig der et individ bor, spesielt ting som kan ha betydning for individets helse og sikkerhet, eller ha innvirkning på ytelse av helsetjenester.\r\n\r\nDenne arketypen er utformet for å registrere attributter til et individs hjem, og vil kunne brukes til:\r\n- å identifisere hjelpemidler som kan være nyttig i boligen\r\n- registrere modifikasjoner og forbedringer for å støtte universell utforming (UU), eller\r\n- bidra til offentlige undersøkelser knyttet til sykdomsutbrudd.\r\n\r\nDenne arketypen er utformet for å brukes i EVALUATION.housing_summary (Boligsammendrag) eller CLUSTER.housing_record (Bolig), men kan også bli brukt i hvilken som helst annen passende ENTRY- eller CLUSTER-arketype.\r\n\r\nDersom det er nødvendig med spesifikke detaljer, kan arketyper legges til i elementet \"Ytterligere detaljer\". \r\n\r\nGrad av overensstemmelse med designprinsipper for universell utforming (UU) bør registreres i en egen arketype, som kan legges til i SLOT'et \"Ytterligere detaljer\".",
+          "misuse" : "Skal ikke brukes til å registrere detaljer om de sosiale forholdene individet bor under, bruk CLUSTER.living_arrangement til dette.\r\n\r\nSkal ikke brukes til å registrere den fysiske adressen der et individ bor, bruk demografiske arketyper for dette, eller CLUSTER.address (Adresse) dersom det er nødvendig å registrere adressen i den medisinske journalen.\r\n\r\nSkal ikke brukes til å registrere informasjon om boligen som ikke har noe betydning for helse, eller behov for helsetjenester til et individ. For eksempel bør ikke informasjon om dørlåsens kode til bruk for hjemmesykepleietjenesten registreres i denne arketypen.\r\n\r\nSkal ikke brukes for å registrere grad av overenstemmelse med prinsipper for universell utforming.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record an overview and description about aspects about the dwelling where an individual lives.",
+          "keywords" : [ "stairs", "bedroom", "bathroom", "access" ],
+          "use" : "Use to record details about the dwelling where an individual lives, particularly where this may have an impact on their health and safety or delivery of healthcare services.\r\n\r\nThis archetype has been designed to be used to record attributes of an individual's home that might be used to:\r\n- contribute to identification of aids/supports that might be useful in the home; \r\n- record modifications or enhancements to support universal access; or\r\n- inform investigations about public health outbreaks.\r\n\r\nThis archetype has been designed to be used within the EVALUATION.housing_summary or CLUSTER.housing_record archetypes, but may be used within any other appropriate ENTRY or CLUSTER archetype. \r\n\r\nIf specific measurements or specific details are required, additional archetypes can be nested within the 'Additional details' SLOT.\r\n\r\nCompliance with Universal design principles should be recorded in a separate archetype, which may be nested within the 'Additional details' SLOT.",
+          "misuse" : "Not to be used to record details about the social circumstances in which the individual lives - use CLUSTER.living_arrangement for this purpose.\r\n\r\nNot to be used to record the physical address where an individual lives - use demographic archetypes for this purpose, or CLUSTER.address if the individual's address needs to be recorded within the health record.\r\n\r\nNot to be used to record information about the dwelling that does not impact on the health or health care needs of an individual. For example, the security access code for a home nurse visit should not be recorded using this archetype.\r\n\r\nNot to be used to record compliance with Universal design principles.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare una panoramica e una descrizione degli aspetti dell'abitazione in cui vive un individuo.",
+          "keywords" : [ "scale", "camera da letto", "bagno", "accesso" ],
+          "use" : "Utilizzare per registrare i dettagli dell'abitazione in cui vive un individuo, in particolare quando ciò può avere un impatto sulla sua salute e sicurezza o sulla fornitura di servizi sanitari.\r\n\r\nQuesto archetipo è stato progettato per essere utilizzato per registrare gli attributi dell'abitazione di un individuo che potrebbero essere utilizzati:\r\n- contribuire all'identificazione di aiuti/supporti che potrebbero essere utili nella casa; \r\n- registrare modifiche o miglioramenti a sostegno dell'accesso universale; oppure\r\n- informare le indagini sulle epidemie di salute pubblica.\r\n\r\nQuesto archetipo è stato progettato per essere utilizzato all'interno degli archetipi EVALUATION.housing_summary o CLUSTER.housing_record, ma può essere utilizzato all'interno di qualsiasi altro archetipo ENTRY o CLUSTER appropriato. \r\n\r\nSe sono richieste misurazioni specifiche o dettagli specifici, archetipi aggiuntivi possono essere annidati all'interno dello SLOT \"Dettagli aggiuntivi\".\r\n\r\nLa conformità ai principi di progettazione universali deve essere registrata in un archetipo separato, che può essere annidato nello SLOT \"Dettagli aggiuntivi\".",
+          "misuse" : "Da non utilizzare per registrare i dettagli sulle circostanze sociali in cui vive l'individuo - utilizzare a tal fine CLUSTER.living_arrangement.\r\n\r\nDa non utilizzare per registrare l'indirizzo fisico in cui vive l'individuo - utilizzare gli archetipi demografici per questo scopo, o CLUSTER.address se l'indirizzo dell'individuo deve essere registrato all'interno della cartella clinica.\r\n\r\nNon deve essere utilizzato per registrare informazioni sull'abitazione che non hanno un impatto sulla salute o sulle esigenze sanitarie di un individuo. Ad esempio, il codice di accesso di sicurezza per la visita di un'infermiera a domicilio non deve essere registrato utilizzando questo archetipo.\r\n\r\nNon deve essere usato per registrare la conformità ai principi di progettazione universale.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.dwelling.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-dwelling-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0036.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0041.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0009.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0011.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0012.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0028.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0013.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0035.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "magnitude",
+                "children" : [ {
+                  "@type" : "C_INTEGER",
+                  "rmTypeName" : "INTEGER",
+                  "constraint" : [ {
+                    "lower" : 0,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : false,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0014.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0029.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "magnitude",
+                "children" : [ {
+                  "@type" : "C_INTEGER",
+                  "rmTypeName" : "INTEGER",
+                  "constraint" : [ {
+                    "lower" : 0,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : false,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0015.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0016.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0037.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0038.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0017.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0040.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0018.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0039.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0020.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0021.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0034.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0033.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0025.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0043.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { },
+        "it" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "5ca29b1b-178d-404b-8dbe-ac6e0c70dd71",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Tanja Zeppernick",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Zeppernick.Tanja@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen",
+        "organisation" : "Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Paolo Anedda",
+        "organisation" : "Inpeco",
+        "email" : "paolo.anedda@inpeco.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "71b7a8aa-f9d0-44e5-b793-7e764f28b7d8",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Zusammenfassung oder beständiger Information zu aktuellen und früheren Jobs und / oder Rollen einer Person.",
+          "keywords" : [ "Beschäftigung", "Studium", "Job", "Arbeit", "Pflegekraft", "Rolle", "Pensionär", "Schüler", "Mitarbeiter", "Arbeitgeber", "Beruf", "Arbeitslosigkeit", "Berufstätigkeit", "Kind", "Rentner", "Behinderte" ],
+          "use" : "Zur Darstellung einer Zusammenfassung oder beständiger Information zu aktuellen und früheren Jobs und / oder Rollen einer Person.\r\n\r\nDieser Archetyp wurde entwickelt, um als eigenständiger Archetyp im Kontext einer sozialen Vorgeschichte (oder ähnlich) in einem Template verwendet zu werden. Es ist beabsichtigt, eine Zusammenfassung aller Beschäftigungen im weitesten Sinne zu bieten. Verwenden Sie für jeden Job oder jede Rolle eine separate Instanz des CLUSTER.occupation_record im SLOT für \"Beschäftigungsepisode\".",
+          "misuse" : "Nicht zur Darstellung strukturierter Angaben zu einem bestimmten Job oder einer bestimmten Rolle verwenden. Verwenden Sie zu diesem Zweck den Archetyp CLUSTER.occupation_record im SLOT \"Beschäftigung\".\r\n\r\nNicht zur detaillierten Beschreibung von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Substanzen am Arbeitsplatz verwenden. Verwenden Sie für diese Zwecke den Archetyp EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nDarf nicht verwendet werden, um Informationen über Einkommensquellen oder Einkommensangaben für die Person darzustellen. Verwenden Sie dafür den Archetyp CLUSTER.income_summary.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag eller varig (persistent) informasjon om et individs nåværende eller tidligere arbeid og/eller roller.",
+          "keywords" : [ "arbeid", "arbeidstaker", "arbeidsgiver", "arbeidsforhold", "arbeidshistorikk", "jobb", "ansatt", "yrke", "arbeidsløs", "studerer", "student", "elev", "trygdet", "ufør", "arbeidssituasjon", "erverv", "yrkestilknytning", "pensjon", "pensjonist", "attføring", "bransje", "arbeidsledig", "hjemmeværende", "stilling", "profesjon", "frivillig" ],
+          "use" : "Brukes for å registrere et sammendrag eller varig (persistent) informasjon om et individs nåværende eller tidligere arbeid og/eller roller.\r\n\r\nArketypen er laget for å være en frittstående arketype, og kan benyttes som del av individets sosialanamnese i en templat.\r\nDen er ment å gi et sammendrag over alle former for arbeid/roller. For hver enkelt jobb eller rolle brukes én instans av arketypen CLUSTER.occupation_record (Arbeidsforhold/rolle) i SLOTet \"Arbeidsepisode\".",
+          "misuse" : "Brukes ikke for å registrere strukturerte detaljer om en spesifikk rolle eller bidrag. Bruk arketypen CLUSTER.occupation_record (Arbeidsforhold/rolle) i SLOTet \"Arbeidsepisode\" for dette formålet.\r\n\t\r\nBrukes ikke for detaljerte beskrivelser av helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om individets inntekt eller inntektskilder. Bruk arketypen CLUSTER.income_summary for dette formålet.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a summary or persistent information about an individual's current and past jobs and/or roles.",
+          "keywords" : [ "employment", "study", "job", "work", "carer", "role", "pensioner", "student", "employee", "employer", "profession", "unemployment", "occupation", "child", "retiree", "disabled" ],
+          "use" : "Use to record a summary or persistent information about an individual's current and past jobs and/or roles.\r\n\r\nThis archetype has been designed to be used as a standalone archetype within the context of a Social History (or similar) template. It is intended to provide a summary of all occupations, considered in the broadest sense. For each job or role, use a separate instance of the CLUSTER.occupation_record within the SLOT for 'Occupation episode'.",
+          "misuse" : "Not to be used for recording structured details about a specific job or role. Use the CLUSTER.occupation_record archetype within 'Occupation record' SLOT for this purpose.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the EVALUATION.health_risk or EVALUATION.exposure archetype for these purposes.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the CLUSTER.income_summary archetype for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare un sommario o informazioni persistenti sulle attività lavorative e/o ruoli presenti e passati di un individuo.",
+          "keywords" : [ "impiego, studio, lavoro, occupazione, badante, ruolo, pensionato, studente, impiegato, datore di lavoro, professione, disoccupazione, occupazione, figlio, disabile" ],
+          "use" : "Usato per registrare un sommario o informazioni persistenti sulle attività lavorative e/o ruoli presenti e passati di un individuo.\r\n\r\nQuesto archetipo è stato ideato per essere usato come archetipo a sé stante all'interno di un template per la 'Storia sociale' (o simili). L'archetipo intende fornire un sommario  di tutte le occupazioni, considerate nel senso più ampio del termine. Per ogni professione o ruolo, usare una istanza separata dell'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.",
+          "misuse" : "Non utilizzare per memorizzare dettagli strutturati riguardanti una specifica professione o ruolo. Per questo scopo, usare invece l'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.\r\n\r\nNon utilizzare per descrizioni dettagliate dei rischi per la salute o dell'esposizione a sostanze pericolose nel luogo di lavoro. Utilizzare invece gli archetipi EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNon utilizzare per memorizzare informazioni sulle fonti o dettagli del reddito dell'individuo. Per questo scopo, utilizzare l'archetipo EVALUATION.income_summary.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.occupation_summary.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-occupation_summary-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0004.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "v2 Job status"
+                      },
+                      "constraint" : [ "ac0.1" ],
+                      "selectedTerminologies" : [ "v2 Job status" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0006.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-occupation_record-001.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0007",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "it" : { },
+        "de" : { }
+      },
+      "termBindings" : {
+        "v2 Job status" : {
+          "ac0.1" : "terminology://fhir.hl7.org/ValueSet/$expand?url=http://terminology.hl7.org/ValueSet/v2-0311"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "806bc0d0-1ad8-4686-93a9-b424423c91f5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke",
+        "organisation" : "Nasjonal IKT HF"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Cecilia Mascia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "cecilia.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "e00d7092-3cb5-482b-9274-779723414c07",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Darstellung von detaiilierten Informationen zu einem Job oder einer Rolle, die von einer Person während eines bestimmten Zeitraums ausgeführt wurde.",
+          "keywords" : [ "Beschäftigung", "Arbeitgeber", "Job", "Tätigkeit", "Arbeit", "Beruf", "arbeitslos", "Mitarbeiter", "Arbeitslosigkeit", "studieren", "beschäftigt", "Schüler", "Branche", "Berufstätigkeit", "Freiwilliger", "Berufung", "Handel", "Arbeiter", "Ehrenamtliche", "Position", "Arbeitsplatz" ],
+          "use" : "Verwenden Sie diesen Archetyp, um detaillierte Angaben zu einem Job oder einer Rolle darzustellen, die von einer Person während eines bestimmten Zeitraums ausgeführt wurde.\r\n\r\nDer Umfang dieses Archetyps umfasst alle Beschäftigungen oder Tätigkeiten einer Person. Zum Beispiel: ein bezahlter Job oder Dienst; unbezahlte Arbeit jeglicher Art wie eine Freiwilligentätigket; oder Rollen wie Ruhestand oder Student.\r\n\r\nMehrere Instanzen dieses Archetyps, die im Laufe der Zeit erfasst werden, führen zur Übersicht eines Verlaufs vergangener und aktueller Jobs und / oder Rollen.\r\n\r\nEine aktive, aktuelle Beschäftigung kann aus \"Beginn\" abgeleitet werden, wenn unter \"Ende\" nichts vermerkt ist.\r\n\r\nEine Person kann viele gleichzeitige Beschäftigungen ausüben, von denen jede bezahlt oder unbezahlt sein kann. Jede Beschäftigung sollte in einer separaten Instanz dieses Archetyps dargestellt werden.\r\n\r\nWenn sich die Details der Beschäftigung wesentlich ändern, z. B. eine Änderung der Rolle / des Titels oder der Anzahl der Stunden, sollte dies als separate Instanz dieses Archetyps dargestellt werden.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung im SLOT \"Beschäftigungsepisode\" im Archetyp \"EVALUATION.occupation_summary\" entwickelt, kann aber auch in anderen ENTRY- oder CLUSTER-Archetypen verwendet werden, sofern dies klinisch angemessen ist.\r\n\r\nEs können offensichtliche oder tatsächliche Überlappungen zwischen den Datenelementen dieses Archetyps und demografische Details zu Berufs- / Beschäftigungsdetails an anderen Stellen der klinischen oder administrativen Systeme geben. Die Datenelemente dieses Archetyps wurden speziell zur Unterstützung klinischer Zwecke entwickelt, einschließlich der Erstellung eines ärztlichen Attests für einen aktuellen Arbeitgeber.",
+          "misuse" : "Darf nicht verwendet werden, um vorübergehende Änderungen oder Episoden innerhalb eines einzelnen Beschäftigungsdatensatzes darzustellen, z. B. Urlaub. Dies ist mit diesen Archetyp nicht möglich und sollte Teil des Human Relations-Systems eines Arbeitgebers sein.\r\n\r\nNicht zur detaillierten Beschreibung von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Substanzen am Arbeitsplatz verwenden. Verwenden Sie zu diesem Zweck die Archetypen EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nDarf nicht verwendet werden, um Informationen über Einkommensquellen oder Einkommensangaben für die Person darzustellen. Verwenden Sie zu diesem Zweck den Archetyp EVALUATION.income_summary.\r\n\r\nNicht zur Darstellung von Informationen über die Beschäftigung einer Person zu einem bestimmten Zeitpunkt (z. B. am 16. Juni 2014) oder während eines relativen Zeitintervalls (z. B. „in den letzten 30 Tagen“) verwenden. Verwenden Sie einen geeigneten OBSERVATION-Archetyp für diesen Zweck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt"
+          },
+          "purpose" : "Registrar detalhes sobre um único trabalho ou função executada por um indivíduo durante um período especificado.\r\n",
+          "keywords" : [ "emprego", "Empregador", "trabalho", "ocupação", "trabalhos", "profissão", "desempregado", "empregado", "desemprego", "estudante", "aluno", "setor", "profissão", "voluntário", "vocação", "comércio", "trabalhador", "posição" ],
+          "use" : "Use para registrar detalhes sobre um único trabalho ou função realizada por uma pessoa durante um período especificado.\r\n\r\nO escopo deste arquétipo inclui todas as ocupações ou atividades realizadas por um indivíduo. Por exemplo: um trabalho remunerado ou emprego; trabalho não remunerado de qualquer tipo, como uma posição de voluntário; ou papéis como aposentado ou aluno.\r\n\r\nVárias instâncias desse arquétipo capturadas ao longo do tempo resultarão na agregação de um histórico de trabalhos e / ou funções anteriores e atuais.\r\n\r\nUma ocupação ativa ou atual pode estar implícita a partir de uma 'Data de início', mas não pela 'Data de encerramento'.\r\n\r\nUm indivíduo pode realizar ocupações simultâneas, cada uma das quais podendo ser remuneradas ou não. Cada ocupação deve ser registrada em uma instância separada desse arquétipo.\r\n\r\nSe os atributos de ocupação mudarem significativamente, como uma mudança de função / título ou número de horas, isso deverá ser registrado como uma instância separada desse arquétipo.\r\n\r\nEsse arquétipo foi projetado especificamente para ser usado no SLOT 'Episódio de ocupação' dentro do arquétipo EVALUATION.occupation_summary, mas também pode ser usado em qualquer outro arquétipo ENTRY ou CLUSTER, onde for clinicamente apropriado.\r\n\r\nPode haver alguma sobreposição aparente ou real entre os elementos de dados neste arquétipo e os detalhes de ocupação / emprego que podem ser armazenados como detalhes demográficos em sistemas clínicos ou administrativos. Esses elementos de dados foram projetados especificamente para apoiar fins clínicos, incluindo a geração de um atestado médico para um empregador atual.",
+          "misuse" : "\t\r\nNão deve ser usado para gravar alterações ou episódios temporários em um registro único de ocupação, como estar de licença. Isso está fora do escopo desse arquétipo e deve fazer parte do sistema de recursos humanos de um empregador.\r\n\r\nNão deve ser usado para descrições detalhadas de riscos para a saúde ou exposição a substâncias perigosas no local de trabalho. Use os arquétipos EVALUATION.health_risk ou EVALUATION.exposure para essa finalidade.\r\n\r\nNão deve ser usado para registrar informações sobre fontes de renda ou detalhes de renda da pessoa. Use o arquétipo EVALUATION.income_summary para esse fim.\r\n\r\nNão deve ser usado para registrar informações sobre a ocupação de um indivíduo em um momento específico (por exemplo, em 16 de junho de 2014) ou durante um intervalo de tempo relativo (por exemplo, 'nos últimos 30 dias'). Use um arquétipo do tipo OBSERVATION para esse fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.",
+          "keywords" : [ "arbeid", "arbeidstaker", "arbeidsgiver", "arbeidsforhold", "arbeidshistorikk", "jobb", "ansatt", "yrke", "arbeidsløs", "studerer", "student", "elev", "trygdet", "ufør", "arbeidssituasjon", "erverv", "yrkestilknytning", "pensjon", "pensjonist", "attføring", "bransje", "arbeidsledig", "hjemmeværende", "stilling", "profesjon", "frivillig", "vernepliktig", "sektor", "næring", "verv" ],
+          "use" : "Brukes for å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.\r\n\r\nArketypen omfatter alle typer arbeid eller aktiviteter individet har eller har hatt. For eksempel: En/et betalt eller ubetalt jobb/arbeid/verv, samt ulike roller som for eksempel pensjonist, hjemmeværende eller student.\r\n\r\nVed å benytte denne arketypen til gjentatte registreringer, vil en få fram en historisk oversikt over nåværende og tidligere arbeidsforhold /roller et individ har eller har hatt.\r\n\r\nEt aktivt, nåværende arbeidsforhold/roller kan bli utledet fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\".\r\n\r\nEt individ kan ha mange samtidige arbeidsforhold/rolle, og de kan hver for seg være betalt eller ubetalt. Hvert slik arbeidsforhold registreres i egne instanser av denne arketypen.\r\n\r\nHvis detaljer om et arbeidsforhold/rolle endrer seg vesentlig, som forandring av tittel eller stillingsprosent, registreres dette i egne instanser av denne arketypen.\r\n\r\nArketypen er laget for å benyttes i SLOTet \"Arbeidsepisode\" i arketypen EVALUATION.occupation_summary (Arbeidssammendrag), men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.\r\n\r\nDet kan fremstå som å være overlapp, reell eller tilsynelatende, mellom dataelementene i denne arketypen og demografiske opplysninger om sysselsetting/arbeidsforhold andre steder i kliniske systemer. Dataelementene i denne arketypen er laget spesifikt for å støtte kliniske bruksområder, inkludert sykemeldinger eller legeerklæringer.",
+          "misuse" : "Brukes ikke for å registrere midlertidige endringer eller episoder innen en enkelt arbeidsepisode, som å være i permisjon. Dette er ikke innenfor anvendelsesområdet for denne arketypen, og skal registreres i et personal- eller HR-system.\r\n\r\nBrukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om individets inntektskilder eller detaljer om inntekt. Bruk arketypen EVALUATION.income_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om arbeid /rolle for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Dette kan utledes fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\", og må registreres i en egen OBSERVATION-arketype for dette formålet.",
+          "copyright" : "© 2010 NEHTA, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar detalhes sobre um único trabalho ou função executada por um indivíduo durante um período especificado.",
+          "keywords" : [ "emprego", "Empregador", "trabalho", "ocupação", "trabalhos", "profissão", "desempregado", "empregado", "desemprego", "estudante", "aluno", "setor", "profissão", "voluntário", "vocação", "comércio", "trabalhador", "posição" ],
+          "use" : "Use para registrar detalhes sobre um único trabalho ou função realizada por uma pessoa durante um período especificado.\r\n\r\nO escopo deste arquétipo inclui todas as ocupações ou atividades realizadas por um indivíduo. Por exemplo: um trabalho remunerado ou emprego; trabalho não remunerado de qualquer tipo, como uma posição de voluntário; ou papéis como aposentado ou aluno.\r\n\r\nVárias instâncias desse arquétipo capturadas ao longo do tempo resultarão na agregação de um histórico de trabalhos e / ou funções anteriores e atuais.\r\n\r\nUma ocupação ativa ou atual pode estar implícita a partir de uma 'Data de início', mas não pela 'Data de encerramento'.\r\n\r\nUm indivíduo pode realizar ocupações simultâneas, cada uma das quais podendo ser remuneradas ou não. Cada ocupação deve ser registrada em uma instância separada desse arquétipo.\r\n\r\nSe os atributos de ocupação mudarem significativamente, como uma mudança de função / título ou número de horas, isso deverá ser registrado como uma instância separada desse arquétipo.\r\n\r\nEsse arquétipo foi projetado especificamente para ser usado no SLOT 'Episódio de ocupação' dentro do arquétipo EVALUATION.occupation_summary, mas também pode ser usado em qualquer outro arquétipo ENTRY ou CLUSTER, onde for clinicamente apropriado.\r\n\r\nPode haver alguma sobreposição aparente ou real entre os elementos de dados neste arquétipo e os detalhes de ocupação / emprego que podem ser armazenados como detalhes demográficos em sistemas clínicos ou administrativos. Esses elementos de dados foram projetados especificamente para apoiar fins clínicos, incluindo a geração de um atestado médico para um empregador atual.",
+          "misuse" : "Não deve ser usado para gravar alterações ou episódios temporários em um registro único de ocupação, como estar de licença. Isso está fora do escopo desse arquétipo e deve fazer parte do sistema de recursos humanos de um empregador.\r\n\r\nNão deve ser usado para descrições detalhadas de riscos para a saúde ou exposição a substâncias perigosas no local de trabalho. Use os arquétipos EVALUATION.health_risk ou EVALUATION.exposure para essa finalidade.\r\n\r\nNão deve ser usado para registrar informações sobre fontes de renda ou detalhes de renda da pessoa. Use o arquétipo EVALUATION.income_summary para esse fim.\r\n\r\nNão deve ser usado para registrar informações sobre a ocupação de um indivíduo em um momento específico (por exemplo, em 16 de junho de 2014) ou durante um intervalo de tempo relativo (por exemplo, 'nos últimos 30 dias'). Use um arquétipo do tipo OBSERVATION para esse fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a single job or role carried out by an individual during a specified period of time.",
+          "keywords" : [ "employment", "employer", "job", "occupation", "work", "profession", "unemployed", "employee", "unemployment", "studying", "employed", "student", "sector", "profession", "volunteer", "vocation", "trade", "worker", "volunteer", "position" ],
+          "use" : "Use to record details about a single job or role carried out by an individual during a specified period of time. \r\n\r\nThe scope of this archetype is inclusive of all occupations or activities undertaken by an individual. For example: a paid job or employment; unpaid work of any type such as a volunteer position; or roles such as being retired or a student. \r\n\r\nMultiple instances of this archetype captured over time will result in the aggregation of a history of past and present jobs and/or roles.\r\n\r\nAn active, or current occupation may be implied from a 'Date commenced' but no 'Date ceased'. \r\n\r\nAn individual may carry out many simultaneous occupations, each of which may be paid or unpaid. Each occupation should be recorded in a separate instance of this archetype.\r\n\r\nIf occupation attributes change significantly, such as a change of role/title or number of hours, then this should be recorded as a separate instance of this archetype.\r\n\r\nThis archetype has been specifically designed to be used in the 'Occupation episode' SLOT within the EVALUATION.occupation_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThere may be some apparent or real overlap between the data elements in this archetype and occupation/employment details that may be stored as demographic details in clinical or administrative systems. These data elements have been designed specifically to support clinical purposes including generation of a medical certificate to a current employer.",
+          "misuse" : "Not to be used to record temporary changes or episodes within a single occupation record, such as being on leave. This is out of scope for this archetype and should be part of an employer's human relations system.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the EVALUATION.income_summary archetype for this purpose.\r\n\r\nNot to be used to record information about the occupation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare i dettagli della singola professione svolta o ruolo ricoperto da un individuo durante un determinato periodo di tempo.",
+          "keywords" : [ "lavoro, impiego, datore di lavoro, occupazione, disoccupazione, professione, disoccupato, occupato, dipendente, impiegato, studente, settore, volontario, vocazione, mestiere, lavoratore, posizione" ],
+          "use" : "Usato per registrare i dettagli della singola professione svolta o ruolo ricoperto da un individuo durante un determinato periodo di tempo.\r\n\r\nL'ambito di questo archetipo comprende tutte le occupazioni o attività svolte da un individuo. Ad esempio: un lavoro o impiego retribuiti; un qualsiasi lavoro non retribuito, come un'attività di volontariato; o ruoli come essere in pensione o uno studente. \r\n\r\nPiù istanze di questo archetipo catturate nel tempo possono essere aggregate per costruire la storia occupazionale di un individuo, che comprende occupazioni e ruoli passati e presenti.\r\n\r\nÈ possibile dedurre se l'occupazione sia attiva/corrente se è presente una 'Data di inizio' ma non una 'Data di cessazione'.\r\n\r\nUn individuo può avere più occupazioni contemporaneamente, ciascuna delle quali può essere retribuita o meno. Ogni occupazione dovrebbe essere registrata in una istanza separata di questo archetipo. \r\n\r\nSe i dettagli dell'occupazione cambiano significativamente, ad esempio in caso di modifica del ruolo/titolo o numero di ore, questo dovrebbe corrispondere ad un'istanza separata di questo archetipo.\r\n\r\nQuesto archetipo è stato sviluppato per essere usato nello SLOT 'Episodio lavorativo' all'interno dell'archetipo EVALUATION.occupation_summary, ma è possibile utilizzarlo all'interno di altri archetipi di tipo ENTRY o CLUSTER quando clinicamente appropriato. \r\n\r\nCi potrebbe essere una sovrapposizione, apparente o reale, tra i dati all'interno di questo archetipo e i dettegli sull'occupazione/impiego memorizzati come informazioni demografiche all'interno di sistemi clinici o amministrativi.  I contenuti sono stati espressamente progettati per supportare l'attività clinica, compresa la generazione di certificati medici per un datore di lavoro.",
+          "misuse" : "Non utilizzare per memorizzare cambiamenti o episodi temporanei all'interno di un singolo record di occupazione, come ad esempio essere in congedo. Questo non rientra nello scopo dell'archetipo e dovrebbe far parte del sistema di gestione delle risorse umane del datore di lavoro. \r\n\r\nNon utilizzare per descrizioni dettagliate dei rischi per la salute o dell'esposizione a sostanze pericolose nel luogo di lavoro. Utilizzare invece gli archetipi EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNon utilizzare per memorizzare informazioni sulle fonti o dettagli del reddito dell'individuo. Per questo scopo, utilizzare l'archetipo EVALUATION.income_summary.\r\n\r\nNon utilizzare per memorizzare informazioni sull'occupazione di un individuo in uno specifico punto nel tempo (ad esempio, il 16 giugno 2014) o durante un intervallo di tempo (ad esempio 'negli ultimi 30 giorni'). Per questo scopo, usare un appropriato archetipo di tipo OBSERVATION. ",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Un travail ou un rôle unique exercé par un individu pendant une période de temps déterminée.",
+          "keywords" : [ "emploi", "employeur", "emploi", "Occupation", "travail", "profession", "sans emploi", "employé", "chômage", "en train d'étudier", "employé", "étudiant", "secteur", "profession", "bénévole", "vocation", "Commerce", "ouvrier", "bénévole", "position" ],
+          "use" : "*Use to record details about a single job or role carried out by an individual during a specified period of time. \r\n\r\nThe scope of this archetype is inclusive of all occupations or activities undertaken by an individual. For example: a paid job or employment; unpaid work of any type such as a volunteer position; or roles such as being retired or a student. \r\n\r\nMultiple instances of this archetype captured over time will result in the aggregation of a history of past and present jobs and/or roles.\r\n\r\nAn active, or current occupation may be implied from a 'Date commenced' but no 'Date ceased'. \r\n\r\nAn individual may carry out many simultaneous occupations, each of which may be paid or unpaid. Each occupation should be recorded in a separate instance of this archetype.\r\n\r\nIf occupation attributes change significantly, such as a change of role/title or number of hours, then this should be recorded as a separate instance of this archetype.\r\n\r\nThis archetype has been specifically designed to be used in the 'Occupation episode' SLOT within the EVALUATION.occupation_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThere may be some apparent or real overlap between the data elements in this archetype and occupation/employment details that may be stored as demographic details in clinical or administrative systems. These data elements have been designed specifically to support clinical purposes including generation of a medical certificate to a current employer.(en)",
+          "misuse" : "*Not to be used to record temporary changes or episodes within a single occupation record, such as being on leave. This is out of scope for this archetype and should be part of an employer's human relations system.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the EVALUATION.income_summary archetype for this purpose.\r\n\r\nNot to be used to record information about the occupation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Para registrar detalles sobre un trabajo o rol llevado a cabo por un individuo durante un periodo de tiempo especificado.",
+          "keywords" : [ "empleo", "empleador", "trabajo", "ocupación", "tarea", "profesión", "desempleado", "empleado", "desempleo", "estudiando", "empleado", "estudiante", "sector", "profesión", "voluntario", "vocación", "comercio", "trabajador", "voluntario", "cargo" ],
+          "use" : "Usar para registrar detalles sobre un trabajo o rol particular llevado a cabo por un individuo durante un periodo de tiempo especificado.\r\n\r\nEl alcance de este arquetipo incluye todos los empleos o actividades llevadas a cabo por el individuo. Por ejemplo: Un trabajo o empleo pagado; trabajo no remunerado de cualquier tipo como voluntario; o roles tales como estar jubilado o ser estudiante.\r\n\r\nMúltiples instancias de este arquetipo capturadas a lo largo del tiempo resultarán en una agregación de un histórico de trabajos y/o roles presentes o pasados.\r\n\r\nUn trabajo actual puede deducirse de la 'Fecha empezado' pero no de la 'Fecha finalizado'.\r\n\r\nUn individuo puede llevar a cabo muchas ocupaciones al mismo tiempo, las cuales pueden ser remuneradas o no remuneradas. Cada ocupación debería de ser registrada en una instancia separada de este arquetipo.\r\n\r\nSi los atributos de la ocupación cambian significativamente, tales como cambios en el título/rol o el número de horas, éstas se deberían de registrar en una instancia separada de este arquetipo.\r\n\r\nEste arquetipo ha sido específicamente diseñado para ser usado en el SLOT de 'Episodio de ocupación' dentro del arquetipo EVALUATION.occupation_summary, pero también puede ser usado dentro de cualquier otro arquetipo ENTRY o CLUSTER, cuando sea clínicamente apropiado.\r\n\r\nPuede haber una superposición aparente o real entre los elementos de datos en este arquetipo y detalles sobre la ocupación/empleo que puedan haber sido incluidos como detalles demográficos en sistemas clínicos o administrativos. Estos elementos de datos se han diseñado específicamente para dar soporte a propósitos clínicos como puede ser la generación de un certificado médico para el empleador actual.",
+          "misuse" : "No debe ser usado para registrar cambios temporales o episodios dentro de un único registro ocupacional, tales como estar de baja. Esto está fuera del alcance de este arquetipo y debería ser parte de un sistema de recursos humanos del empleador.\r\n\r\nNo debe ser usado para una descripción detallada de los riesgos de salud o exposición a sustancias nocivas en el lugar de trabajo. Para este propósito use los arquetipos EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNo debe ser usado para registrar información sobre fuentes o detalles de ingresos de un individuo. Para este propósito use el arquetipo EVALUATION.income_summary.\r\n\r\nNo debe ser usado para registrar información sobre la ocupación de un individuo en un punto concreto de tiempo (por ejemplo, el 16 de Junio de 2014) o durante un periodo de tiempo relativo (por ejemplo 'durante los últimos 30 días'). Para este propósito use un arquetipo OBSERVATION adecuado.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.occupation_record.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-occupation_record-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0016.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0013.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_PROPORTION",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "numerator",
+                "children" : [ {
+                  "@type" : "C_REAL",
+                  "rmTypeName" : "Real",
+                  "occurrences" : "1..1",
+                  "constraint" : [ {
+                    "lower" : 0.0,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : false,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
+                  } ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "type",
+                "children" : [ {
+                  "@type" : "C_INTEGER",
+                  "rmTypeName" : "Integer",
+                  "occurrences" : "1..1",
+                  "constraint" : [ {
+                    "lower" : 1,
+                    "upper" : 1,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : true,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : false
+                  }, {
+                    "lower" : 2,
+                    "upper" : 2,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : true,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : false
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0020", "at0021" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0019.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "attributes" : [ ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "precision",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "h/d" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "h/wk" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "h/mo" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "h/a" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "d/wk" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "d/mo" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "wk/mo" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "d/a" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "wk/a" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_REAL",
+                    "constraint" : [ {
+                      "lower" : 0.0,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "mo/a" ]
+                  }, {
+                    "@type" : "C_INTEGER",
+                    "constraint" : [ {
+                      "lower" : 2,
+                      "upper" : 2,
+                      "lowerIncluded" : true,
+                      "upperIncluded" : true,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : false
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0014.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "it" : { },
+        "es" : { },
+        "de" : { },
+        "fr" : { },
+        "pt-br" : { },
+        "pt" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "57df50c6-664f-4a07-b135-14f775278cfe",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke and Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no / varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt"
+      },
+      "author" : {
+        "name" : "Danielle Santos Alves",
+        "organisation" : "Federal University of Pernambuco",
+        "email" : "angeldannyalves@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Danielle Santos Alves",
+        "organisation" : "Federal University of Pernambuco",
+        "email" : "angeldannyalves@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Cecilia Mascia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "ceclila.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Bassem Khouzam, Vanessa Pereira",
+        "organisation" : "Medtronic, Better - Pathfinder",
+        "email" : "bassem.khouzam@medtronic.com, vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Diego Bosca",
+        "organisation" : "VeraTech for Health",
+        "email" : "diebosto@veratech.es"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "d826dc91-a506-437e-bbce-237634e44411",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : { },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung der Umstände dahingehend, wie eine Person allein oder mit anderen zusammen lebt.",
+          "keywords" : [ "allein", "solo", "Familie", "Freunde", "Andere", "Haushalt" ],
+          "use" : "Dient zur Erfassung der Umstände dahingehend, wie eine Person allein oder mit anderen zusammen lebt. \r\n\r\nDie Intention dieses Archetyps ist es, einen Einblick in die tägliche Unterstützung zu bieten, zu der eine Person in ihrer häuslichen Umgebung - sowohl körperlich als auch emotional - Zugang hat. \r\n\r\nDie Konzepte rund um Unterbringung, Unterkunft und Wohnsituation sind komplex und oft potenziell ineinander greifend. Die Intention des Konzepts 'Haushalt' innerhalb dieses Archetyps ist es, Informationen über die Gruppe von Personen (eine oder mehrere) zu erfassen, die in derselben Wohnstätte wohnen und Mahlzeiten oder Wohnraum miteinander teilen. Eine einzelne Wohnstätte kann auch mehrere Haushalte enthalten, wenn weder Mahlzeiten noch Wohnraum geteilt werden. Haushalte können in diesem Kontext Varianten von Patchwork-Familien, Wohngemeinschaften, Gruppenheimen, Pensionen und eine Einzelzimmerbelegung umfassen. \r\n\r\nDieser Archetyp wurde zur Nutzung im Rahmen des Archetypen EVALUATION.housing_summary entworfen, kann aber im Zusammenhang der Erfassung des sozialen Kontexts innerhalb jedes anderen geeigneten ENTRY oder CLUSTER Archetypen verwendet werden.",
+          "misuse" : "*Not to be used to record details of the physical structures / dwellings that a single person lives in - use CLUSTER.dwelling for this purpose. (en)\r\n\r\n*Not to be used to record overall information about about individuals' current and past housing or housing situation. Use EVALUATION.housing_summary for this purpose. (en)\r\n\r\n*Not to be used to record details of the individual's housing or housing for a specified period of time. Use CLUSTER.housing_record for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere om et et individ bor alene eller sammen med andre.",
+          "keywords" : [ "bor alene", "familie", "bokollektiv", "bofellesskap", "husholdning", "kollektiv" ],
+          "use" : "For å registrere om et individ bor alene eller sammen med andre.\r\n\r\nIntensjonen med denne arketypen er å fortelle noe om hvilke dag-til-dag støtte, både fysisk og følelsesmessig, som er tilgjengelig for et individ i sitt hjemmemiljø.\r\n\r\nKonseptene rundt bolig, bosted, bo-arrangement og boformer er sammensatte og ofte potensielt overlappende. I denne arketypen er intensjonen med begrepet 'husholdning' å fange opp informasjon om gruppen mennesker (en eller flere) som bor i samme bolig og deler måltider eller oppholdsrom. En enkelt bolig kan anses å inneholde flere husholdninger hvis man verken deler måltider eller boareal. I denne sammenhengen kan husholdninger inkludere varianter av blandede familier, delt husholdning, bokollektiv, pensjonater og et enkeltrom.\r\n\r\nDenne arketypen er designet for å brukes i EVALUATION.housing_summary (boligsammendrag) arketypen, men kan brukes i enhver annen passende ENTRY- eller CLUSTER-arketype relatert til registrering av en sosial kontekst.",
+          "misuse" : "Skal ikke brukes til å registrere detaljer om den fysiske strukturen/boligen som en individ bor i - bruk CLUSTER.dwelling (Boligegenskaper) til dette formålet.\r\n\r\nSkal ikke brukes til å registrere overordnet informasjon om et individs nåværende og tidligere bolig- eller bosituasjon. Bruk EVALUATION.housing_summary (Boligsammendrag) til dette formålet.\r\n\r\nSkal ikke brukes til å registrere detaljer om et individs bolig eller boform i en spesifisert tidsperiode. Bruk CLUSTER.housing_record (Bolig) til dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the circumstances about how an individual lives alone or with others.",
+          "keywords" : [ "alone", "solo", "family", "friends", "others", "household" ],
+          "use" : "Use to record the circumstances about how an individual lives alone or with others. \r\n\r\nThe intent of this archetype is to provide a sense of the level of day-to-day support, both physically and emotionally, that may be available to an individual in their 'home' setting.\r\n\r\nThe concepts around housing, accommodation and living arrangements are complex and often potentially overlapping. Within this archetype, the intent of the concept of 'household' is to capture information about the group of people (one or more) who live in the same dwelling and share meals or living accommodation. A single dwelling may be considered to contain multiple households if either meals or living space are not shared. In this context households can include varieties of blended families, share housing, group homes, boarding houses, and a single room occupancy.\r\n\r\nThis archetype has been designed to be used within the EVALUATION.housing_summary archetype, but may be used within any other appropriate ENTRY or CLUSTER archetype related to recording social context.",
+          "misuse" : "Not to be used to record details of the physical structures / dwellings that a single person lives in - use CLUSTER.dwelling for this purpose.\r\n\r\nNot to be used to record overall information about an individual's current and past housing or housing situation. Use EVALUATION.housing_summary for this purpose.\r\n\r\nNot to be used to record details of the individual's housing or housing for a specified period of time. Use CLUSTER.housing_record for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare le circostanze di come un individuo vive da solo o con gli altri.",
+          "keywords" : [ "da solo", "assolo", "famiglia", "amici", "altri", "famiglia" ],
+          "use" : "Utilizzare per registrare le circostanze di come un individuo vive da solo o con gli altri. \r\n\r\nL'intento di questo archetipo è quello di fornire un senso del livello di sostegno quotidiano, sia fisico che emotivo, che può essere disponibile per un individuo nel suo ambiente \"domestico\".\r\n\r\nI concetti relativi all'alloggio, alla sistemazione e all'organizzazione della vita sono complessi e spesso potenzialmente sovrapposti. All'interno di questo archetipo, l'intento del concetto di \"casa\" è quello di catturare informazioni sul gruppo di persone (una o più) che vivono nella stessa abitazione e condividono i pasti o l'alloggio. Si può considerare che una singola abitazione contenga più famiglie se non si condividono i pasti o lo spazio abitativo. In questo contesto le famiglie possono includere varietà di famiglie miste, abitazioni condivise, case collettive, pensioni e un'occupazione di una sola stanza.\r\n\r\nQuesto archetipo è stato progettato per essere utilizzato all'interno dell'archetipo VALUTAZIONE.housing_summary, ma può essere utilizzato all'interno di qualsiasi altro archetipo ENTRY o CLUSTER appropriato relativo alla registrazione del contesto sociale.",
+          "misuse" : "Da non utilizzare per registrare i dettagli della struttura fisica in cui vive un individuo - utilizzare CLUSTER.dwelling per questo scopo.\r\n\r\nDa non utilizzare per registrare i dettagli sull'ambiente in cui risiede abitualmente un individuo - utilizzare CLUSTER.dwelling per questo scopo.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.living_arrangement.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-living_arrangement-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0004.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { },
+        "it" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "f91adda8-73b1-458e-80bb-cf9d44b3c862",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Tanja Zeppernick",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Zeppernick.Tanja@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Helse Vest IKT AS, ​Oslo University Hospital, Norway",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ ]
+}
